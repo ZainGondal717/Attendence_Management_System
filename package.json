@@ -8,7 +8,9 @@
     "dev": "nodemon backend/server.js",
     "seed": "node backend/seed.js",
     "client": "cd frontend && npm start",
-    "dev:full": "concurrently \"npm run dev\" \"npm run client\""
+    "dev:full": "concurrently \"npm run dev\" \"npm run client\"",
+    "build": "cd frontend && npm install && npm run build",
+    "install": "cd frontend && npm install"
   },
   "keywords": [
     "blockchain",

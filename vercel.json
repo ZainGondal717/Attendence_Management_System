@@ -1,34 +1,12 @@
 {
-  "version": 2,
-  "name": "blockchain-attendance-frontend",
-  "builds": [
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/build",
+  "installCommand": "npm install",
+  "framework": null,
+  "rewrites": [
     {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "/manifest.json"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "env": {
-    "NODE_VERSION": "18"
-  }
+  ]
 }
