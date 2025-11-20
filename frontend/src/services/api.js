@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Use environment variable for backend API URL, fallback to localhost
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// Use environment variable for backend API URL, fallback to deployed backend
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://attendence-management-system-gcbz.vercel.app/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
